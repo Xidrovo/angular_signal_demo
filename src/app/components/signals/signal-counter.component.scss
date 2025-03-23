@@ -1,0 +1,40 @@
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.counter {
+  &__label {
+    & span {
+      text-align: left;
+      margin-left: 60px;
+    }
+  }
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
+.bigList {
+  max-height: 50px;
+  overflow-y: auto;
+}
+
+.space-x-10 {
+  padding: 0rem 2rem;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

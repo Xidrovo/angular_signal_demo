@@ -1,0 +1,16 @@
+<section>
+  <h1>Multiple Counters (Traditional)</h1>
+    <section class="flex">
+      <section *ngFor="let count of counters; let i = index">
+        <article class="flex-col w-5">
+          <p>Counter {{ i }}: {{ count }}</p>
+          <app-button (onClick)="increment(i)">Increment</app-button>
+        </article>
+      </section>
+    </section>
+</section>
+
+<h3>Large list below (unrelated to counters)</h3>
+<ul class="bigList">
+  <li *ngFor="let item of bigList">{{ item }}</li>
+</ul>

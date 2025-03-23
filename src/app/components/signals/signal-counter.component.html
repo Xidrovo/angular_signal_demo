@@ -1,0 +1,41 @@
+<section class="counter">
+  <h1>Multiple Counters (Signals)</h1>
+    <section class="flex justify-between">
+      <section *ngFor="let counterSig of countersSignals; let i = index">
+        <article class="flex-col w-5">
+          <p>Counter {{ i }}: {{ counterSig() }}</p>
+          <app-button (onClick)="incrementSignal(i)">Increment</app-button>
+        </article>
+      </section>
+    </section>
+  <h3>Large list below (unrelated to counters)</h3>
+  <ul class="bigList">
+    <li *ngFor="let item of bigList">{{ item }}</li>
+  </ul>
+
+  <section class="mt-8 center">
+    <h1>Another example with effects and computed</h1>
+    <section class="flex">
+      <article class="counter__label space-x-10">
+        Left counter: <span>{{ leftcounter() }}</span>
+      </article>
+      <article class="counter__label space-x-10">
+        Right counter: <span>{{ rightcounter() }}</span>
+      </article>
+    </section>
+    <article class="counter__label mt-8">
+      Avarage: <span>{{ avarageCounter() }}</span>
+    </article>
+    <section class="flex mt-8 space-x-10">
+      <div class="space-x-10">
+        <app-button (onClick)="addCounter()">Count izq</app-button>
+      </div>
+      <div class="space-x-10">
+        <app-button (onClick)="substractCounter()">Count der</app-button>
+      </div>
+    </section>
+    <article class="mt-8">
+      <app-button (onClick)="reset()">Reset</app-button>
+    </article>
+  </section>
+</section>

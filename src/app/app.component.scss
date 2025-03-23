@@ -1,0 +1,15 @@
+main {
+  padding: 10rem;
+  vertical-align: middle;
+  max-height: 100vh;
+}
+
+.title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+  & app-button {
+    min-width: 500px;
+  }
+}
